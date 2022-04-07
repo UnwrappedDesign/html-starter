@@ -1,6 +1,6 @@
 # Wicked HTML Starter
 
-This repo is the scaffolding we use at [Wicked Templates](https://wickedtemplates.com) to create new
+This repo is the scaffolding we use at [Unwrapped](https://unwrapped.design) to create new
 Tailwind based HTML templates.
 
 We mainly use plain HTML with Tailwind classes to create stunning eye-catching templates for landing pages
@@ -37,9 +37,8 @@ or components like navigation or footer.
 In the root of `src` we will store full pages importing our layouts, and partials. In our example there is just
 on file named `index.html` but you can create others and add links to them in your navigation.
 
-If you have any doubt about how to use this code, you can reach use in twitter like [@Mike_Andreuzza](https://twitter.com/Mike_Andreuzza)
-and [@g_perales](https://twitter.com/g_perales).
-
+If you have any doubt about how to use this code, you can reach use in twitter at [@Mike_Andreuzza](https://twitter.com/Mike_Andreuzza)
+, [@g_perales](https://twitter.com/g_perales) or  [@unwrappedHQ](https://twitter.com/unwrappedHQ),
 ## Deploying to production
 
 To deploy your website you just have to execute `npm run build` and upload the result in the `/dist` folder
