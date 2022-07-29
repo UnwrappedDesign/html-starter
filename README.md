@@ -1,17 +1,17 @@
-# Wicked HTML Starter
-
+# Unwrapped HTML Starter with Tailwind CSS  & HBS
+![thumbnail]()
 This repo is the scaffolding we use at [Unwrapped](https://unwrapped.design) to create new
 Tailwind based HTML templates.
 
 We mainly use plain HTML with Tailwind classes to create stunning eye-catching templates for landing pages
 marketing pages.
 
-This scaffolding uses [gulp](https://gulpjs.com/) to create workflows to make esier the development. These
+This scaffolding uses [gulp](https://gulpjs.com/) to create workflows to make easier the development. These
 are other of the dependencies and technologies we use:
 
 - [Tailwind CSS](https://tailwindcss.com/) as utility CSS framework
 - [Handlebars](https://handlebarsjs.com/) as template engine to join our layouts, partials into pages.
-- [Imagemin](https://github.com/imagemin/imagemin) to minify images and optimice them for web.
+- [Imagemin](https://github.com/imagemin/imagemin) to minify images and optimize them for web.
 
 ## Getting started
 

@@ -1,97 +1,39 @@
-//
-// This plugin will let set opacity darker on Firefox in case you want to use a blur filter by apending
-// "firefox:" to the class
-// the snippet is att the bottom within the plugins.
-const plugin = require("tailwindcss/plugin");
-// Here we importa all tailwind colors
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 module.exports = {
-  //mode: 'jit',
-
   content: ["./src/**/*.html"],
-
   theme: {
     extend: {
-      boxShadow: {
-        static:
-          "0px 10px 0px -10px rgba(151,163,184,.5), 0px 20px 10px -20px rgba(151,163,184,.5),0px 30px 20px -25px rgba(151,163,184,.5),0px 40px 30px -30px rgba(151,163,184,.5),0px 50px 50px -35px rgba(151,163,184,.5);",
-
-        hover:
-          "0px 5px 8px -5px rgba(151,163,184,.5),0px 15px 16px -15px rgba(151,163,184,.5),0px 25px 32px -25px rgba(151,163,184,.5)",
+      backgroundImage: {
+        desktopGradient: "url('./images/path/to/image')",
       },
-      fontSize: {
-        xs: "0.75rem",
-        sm: "0.875rem",
-        base: "1rem",
-        lg: "1.125rem",
-        xl: "1.25rem",
-        "2xl": "1.5rem",
-        "3xl": "1.875rem",
-        "4xl": "2.25rem",
-        "5xl": "3rem",
-        "6xl": "4rem",
-        "7xl": "5rem",
-        "8xl": "6rem",
-        "9xl": "7rem",
-        "10xl": "8rem",
-        "11xl": "9rem",
-        "12xl": "10rem",
-        "13xl": "11rem",
-        "14xl": "12rem",
-        "15xl": "13rem",
-        "16xl": "14rem",
-        "17xl": "15rem",
-        "18xl": "16rem",
-        "19xl": "17rem",
-        "20xl": "18rem",
+      boxShadow: {
+        DEFAULT: "0px 4px 4px 0px #c4c4c440, 0px 9px 9px 0px #c4c4c440, 0px 18px 18px 0px #c4c4c440;",
       },
       colors: {
-        black: "#16171b",
-
-
+        blue: {
+          "50": "#EBEFFF",
+      "100": "#D6DFFF",
+      "200": "#ADBFFF",
+      "300": "#809BFF",
+      "400": "#577BFF",
+      "500": "#2D5CFF",
+      "600": "#0034F0",
+      "700": "#0027B3",
+      "800": "#001B7A",
+      "900": "#000D3D"
+        },
+      },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "3rem",
+        "6xl": "5rem",
       },
       fontFamily: {
-
-        sans: [
-          '"Inter"',
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-        ], // Ensure fonts with spaces have " " surrounding it.
+        sans: ["Roboto Flex", ...defaultTheme.fontFamily.sans],
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/aspect-ratio"),
-    plugin(function ({ addVariant, e, postcss }) {
-      addVariant("firefox", ({ container, separator }) => {
-        const isFirefoxRule = postcss.atRule({
-          name: "-moz-document",
-          params: "url-prefix()",
-        });
-        isFirefoxRule.append(container.nodes);
-        container.append(isFirefoxRule);
-        isFirefoxRule.walkRules((rule) => {
-          rule.selector = `.${e(
-            `firefox${separator}${rule.selector.slice(1)}`
-          )}`;
-        });
-      });
-    }),
-  ],
+  plugins: [],
 };
