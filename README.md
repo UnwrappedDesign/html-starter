@@ -1,5 +1,5 @@
 # Unwrapped HTML Starter with Tailwind CSS  & HBS
-![thumbnail](./images/thumbnail.png)
+![thumbnail](https://raw.githubusercontent.com/UnwrappedDesign/html-starter/main/src/images/thumbnail.png)
 This repo is the scaffolding we use at [Unwrapped](https://unwrapped.design) to create new
 Tailwind based HTML templates.
 
